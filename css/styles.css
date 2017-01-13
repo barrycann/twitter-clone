@@ -140,6 +140,7 @@ body {
 			}
 
 /* TWEET */
+
 .tweet {
 	clear: both;
 	padding: 9px 12px;
@@ -259,4 +260,9 @@ body {
 				left: 0;
 			}
 
+
+/* Personal Classes */
+.warning-color{
+	color: red !important;
+}
 
