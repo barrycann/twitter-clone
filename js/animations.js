@@ -7,21 +7,16 @@ $(document).ready(function(){
    var $tweetWindow = $('#stream');
    var $tweetText = $tweetCompose.val();
    var $tweetActions = $('.tweet-actions');
-   var $theTweet = $('#tweet');
+   var $theTweet = $('.tweet');
 
    var charCount; 
    var newTweet = {};
 
    $tweetControls.hide();
-   $tweetActions.hide();
+
    $tweetCompose.on('click', function(){
-      $tweetControls.fadeIn('fast', 'linear');
+     $tweetControls.fadeIn(100, 'linear');
    });
-
-   $theTweet.on('hover', function(){
-      $tweetActions.show();
-   });
-
 
    $tweetCompose.on('keyup', function(e){
       charCount = $tweetText.length;
@@ -35,7 +30,6 @@ $(document).ready(function(){
          $charCount.removeClass('warning-color');
          $tweetButton.prop('disabled', false);
       }
-      console.log(charCount);
    });
 
    $tweetButton.on('click', function(){
@@ -55,16 +49,16 @@ $(document).ready(function(){
             '</div>'+
             '<div class="stats">'+
                '<div class="retweets">'+
-                  '<p class="num-retweets">30</p>'+
+                  '<p class="num-retweets">95</p>'+
                   '<p>RETWEETS</p>'+
                '</div>'+
                '<div class="favorites">'+
-                  '<p class="num-favorites">6</p>'+
+                  '<p class="num-favorites">14</p>'+
                  '<p>FAVORITES</p>'+
                '</div>'+
 								'<div class="users-interact">'+
 									'<div>'+
-										'<img src="img/alagoon.jpg" />'+
+										'<img src="img/jennyshen.jpg" />'+
 										'<img src="img/vklimenko.jpg" />'+
 									'</div>'+
 								'</div>'+
@@ -74,12 +68,10 @@ $(document).ready(function(){
 							'</div>'+
 							'<div class="reply">'+
 								'<img class="avatar" src="img/alagoon.jpg" />'+
-								'<textarea class="tweet-compose" placeholder="Reply to'+'@mybff"/></textarea>'+
+								'<textarea class="tweet-compose" placeholder="Reply to'+'@MrPersonMan"/></textarea>'+
 							'</div>'+
 						'</div>'+
-					'</div><!-- .tweet -->'
-               );
-      $tweetActions.hide();
+					'</div><!-- .tweet -->');
    });
 
 
